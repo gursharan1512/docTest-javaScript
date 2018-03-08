@@ -1,0 +1,533 @@
+Table of Contents:
+              Heading                                                                                     Page Number
+0) Table of contents………………………………………………………………………….1
+1) HTML………………………………………………………………………………………….2
+1.1) HTML Tags……………………………………………………………………..2
+1.2) HTML web page screen-shot.…………………………………………….6
+2) CSS…………………………………………………………………………………………..7
+2.1) CSS Properties table………………………………………………………..8
+2.2) CSS web page screen-shot………………………….………………….11
+3) 960 Grid…………………………………………………………………………………...12
+3.1) Containers………………………………………………………………….13
+3.2) Grids………………………………………………………………………...13
+3.3) Prefix and suffix…………………………………………………………..14
+
+
+
+
+
+
+
+
+Blog Entry
+(HTML and CSS)
+
+Welcome keen learners. Today I’ll be you guide for the next hour or two to take you through the basics of HTML and CSS. After this short tutorial, you should be able to make decent looking static web pages. Let’s begin with the first module:
+
+1)HTML
+Hyper Text Markup Language
+
+This is the main skeleton of any website. Any content, may it be text, images, audio or video is inserted with the help of this language. It makes the use of certain tags for the same.
+Let’s look at some of the tags used in HTML:
+1.1) Table of HTML tags:
+Tag
+What it is
+When to use it
+<A>
+Anchor (most commonly a link)
+Vital. Use to create links in content. Use the title attribute whenever the contents of the <a>…</a> pair do not accurately describe what you’ll get from selecting the link. Title attribute often displays as a tool tip in visual browsers, which may be a helpful usability aid.
+<ABBR>
+Defines an abbreviation
+Works in a similar way to <dfn> and <acronym>, using a title attribute (displays a tooltip in standard visual browsers). e.g. <abbr title=” Hypertext markup language”>HTML</abbr>
+<ACRONYM>
+Defines an acronym
+Works in a similar way to <abbr> and <dfn>, using a title attribute (displays a tooltip in standard visual browsers).
+<ADDRESS>
+Used for marking up a physical (e.g. mailing) address
+Not commonly used. Recommend looking into microformats, which allow for more detail and interoperability.
+<APPLET>
+Inserts a Java applet
+The old way to insert a Java app. Use <object> instead today.
+<AREA>
+Hotspot in image map
+Avoid image maps where possible. Occasionally necessary.
+<BASE>
+Specifies the base location of the document.
+Use only when necessary. Adjusts any relative links and paths within the document.
+<BASEFONT>
+Sets default font size
+Display info – never use it
+<BIG>
+Larger text
+Display info – never use it
+<BLINK>
+Makes text blink
+You go to hell if you use this
+<BLOCKQUOTE>
+Large quoted block of text
+Use for any quoted text that constitutes one or more paragraphs (note: should contain <p> tags as well). Use <q> for quotations within a paragraph. Often used in conjunction with <cite> to cite the quotation’s source.
+<BODY>
+Document body
+Essential (unless you’re using frames)
+<BR>
+Line break
+This is arguably display information. Still in common use, but use with restraint.
+<B>
+Bold text
+Display info – never use it
+<BUTTON>
+Used for a standard clickable button within a form
+Often better than <input type=” button” /> or <input type=” submit” />, as it allows you to assign different styles based on the HTML element alone, whereas differentiating style based on the type of input is less well supported.
+<CAPTION>
+Caption for a table: describes the table’s contents
+The correct way to assign a title to a table
+<CENTER>
+Centred block
+Display info – never use it. Use <div> or some other block-level tag with the style text-align:center instead
+<CITE>
+Defines a citation
+Defines the source of a quotation (in conjunction with content in <q> or <blockquote> pairs).
+<CODE>
+Defines an extract of code
+Not commonly used. Similar to <pre> tag but collapses consecutive white spaces and line breaks in the source.
+<COL>
+Identifies a particular column in a table
+Can be very useful. e.g. <col class=” namecol”> can be applied to each first column in a series of tables, then the width of each column may be set to be equal in the stylesheet, overriding the table’s natural tendency to adjust its own column widths to fit its contents.
+<DFN>
+Definition of a term
+Works in a similar way to <abbr> and <acronym>, using a title attribute (displays a tooltip in standard visual browsers).
+<DIR>
+Directory list
+Now deprecated. Use a standard <ul> or other list instead.
+<DIV>
+Division
+Specifies a logical division within a document. Use it to separate or identify chunks of content that are not otherwise distinguished naturally using other tags.
+One of the most common HTML tags.
+<DL>
+Definition list
+Contains one or more definition-term / definition-description pairs.
+<DT>
+Definition term
+Used as part of a <dt></dt><dd></dd>pair within a definition list (<dl></dl>)
+<DD>
+Definition description
+
+<EM>
+Emphasis
+Commonly used in place of the old <i> (italics) tag to indicate emphasis (but less than <strong>)
+<FONT>
+Font settings
+Display info – never use it
+<FORM>
+Input form
+Essential for data input
+<H1>
+Level 1 header
+Aim to have one H1 on each page, containing a description of what the page is about.
+<H2>
+Level 2 header
+Defines a section of the page
+<H3>
+Level 3 header
+Defines a sub-section of the page (should always follow an H2 in the logical hierarchy)
+<H4>
+Level 4 header
+Etc. Less commonly used
+<H5>
+Level 5 header
+Less commonly used. Only complex academic documents will break down to this level of detail.
+<H6>
+Level 6 header
+Less commonly used
+<HEAD>
+Document head
+Essential. Contains information about a page that does not constitute content to be communicated as part of the page.
+<HR>
+Horizontal rule
+Display info with no semantic value – never use it. “Horizontal”, by definition, is a visual attribute.
+<HTML>
+
+Core element of every web page.
+<IMG >
+Show an image
+Vital. Always use the alt or longdesc attributes when the image has content value
+<INPUT>
+Input fields within forms
+Vital. (I prefer to use <button> for buttons and submit buttons though)
+<ISINDEX>
+Old type of search input
+Not really used any more. Use <form>instead.
+<I>
+Italicised text
+Display info – never use it
+<KBD>
+Keyboard input
+Display info – never use it
+<LINK>
+Defines a relationship to another document
+Commonly used to reference external stylesheets, but has other minor uses
+<LI>
+List item
+Specifies an item in an unordered or ordered list (<ul> or <ol>)
+<MAP>
+Client-side imagemap
+May have occasional value, but only use when absolutely necessary
+<MARQUEE>
+Makes text scroll across the screen
+See <blink>
+<MENU>
+Menu item list
+Deprecated. Do not use. Use other standard list types instead.
+<META>
+Meta-information
+Useful way to insert relevant information into the <head> section of the page that does not need to be displayed.
+<OL>
+Ordered list
+Type of list where the order of elements has some meaning. Generally rendered with item numbers (best managed with CSS).
+<OPTION>
+Selection list option
+Vital for options within a drop-down control.
+<PARAM>
+Parameter for Java applet
+Used in conjunction with an <object> or <applet> tag to pass additional setting information at runtime.
+<PRE>
+Preformatted text
+Renders text in a pre-formatted style, preserving line breaks and all spaces present in the source. May be useful. (This one’s a paradox, as it is strictly display info that applies only to visual browsing, but it’s still so commonly used and useful that I’m hesitant to advise against using it.)
+<P>
+Paragraph
+Only use to denote a paragraph of text. Never use for spacing alone.
+<Q>
+Short quotation
+Use for inline quotations (whereas <blockquote> should be used for quotations of a paragraph or more). Often used in conjunction with <cite> to cite the quotation’s source.
+<SAMP>
+Denotes sample output text
+Similar to the <code> tag. Rarely used. Avoid.
+<SCRIPT>
+Inline script (e.g. JavaScript)
+It’s better to have all scripts as separate files than to write inline or in the <head> section, however still has its uses.
+<SELECT>
+Selection list
+A drop-down selector for a form.
+<SMALL>
+Smaller text
+Display info – never use it
+<SPAN>
+An inline span within text
+Use to apply meaning (and style) to a span of text that goes with the flow of content (whereas a <div> tag is block-level and breaks the flow)
+<Strikeout>
+
+Display info – never use it
+<STRONG>
+Strong emphasis
+Use this instead of the old <b> tag.
+<STYLE>
+CSS style settings
+Normally used in <head> section of a page. Try to use external stylesheets, to enable you to apply different styles for different output media.
+<SUB>
+Subscript text
+Arguably display info – recommend using alternative tags (e.g. <cite>). May be required in some academic uses, e.g. Chemical formulas.
+<SUP>
+Superscript text
+
+<TABLE>
+Table
+Use for repeated data that has a naturally tabular form. Never use for layout purposes.
+<TD>
+Table data cell
+A cell containing actual data. If a cell actually contains a descriptor or identifier for a row or column, use a <th> (table header) tag, not a <td>. This usually applies to column headers (within a <thead>), column footers (within a <tfoot>), as well as row headers (usually the first cell in a row in the <tbody>).
+<TEXTAREA>
+Multi-line text input area in a form
+Essential
+<TH>
+Table column or row header cell
+May appear in a <thead> (to denote a column header cell), <tbody> (to denote a row header), and in <tfoot> (to denote a column foot cell, e.g. a total)
+<TBODY>
+Indicates the main body of a data table
+It is always worth using this tag, as well as using <thead> and <tfoot> where appropriate.
+Note that it is permissible to have more than one <tbody>, <thead>, and <tfoot>in the same table.
+<THEAD>
+The head section of a table
+The place to put column header cells (<th>)
+<TFOOT>
+The foot section of a table
+Good place to put e.g. summary data, such as totals. Note that it goes before the <tbody> tag!
+<TITLE>
+Document title
+Essential
+<TR>
+Table row
+Essential with tables
+<TT>
+“Teletype” – simulates typewriter output
+Similar to <pre>, except that it collapses white space like normal HTML (whereas <pre> leaves all consecutive white space intact). Avoid if possible
+<UL>
+Unordered list
+Essential. Use for lists where the order or items has no particular importance.
+<U>
+Underline text
+Display info – never use it
+<VAR>
+Variable in computer code
+Obscure tag, may only be useful in academic documents. Avoid.
+
+
+1.2 This is how a basic HTML website looks like.
+Not very attractive right??
+To make a webpage more presentable, CSS is used, which we will study next.
+Note: Always mention the document type as HTML before writing any HTML code. Use the following tag for it:
+<!DOCTYPE html>
+It is used to inform a website visitor's browser that the document being rendered is an HTML document.
+Note: Always save your HTML files with .html extension (e.g.: example.html).
+
+2)CSS
+Cascading Style Sheets
+
+This is the interesting part of designing the webpage.
+CSS helps you to beautify your webpage.
+Where HTML was used simply to insert the data, CSS on the other hand defines its different attributes.
+It gives the position, size, background color, text color or any other attribute that might be helpful in making the web page presentable.
+First, we need some way to link the CSS page with our HTML page. This is done by adding a “link” tag inside the head tag of our HTML. For example:
+<link rel=” stylesheet” href=”example.css”>
+This will lead the HTML file to its corresponding CSS file.
+Next step is how do I tell the CSS file that a certain element needs styling?
+This task can be achieved in three ways:
+i)  Direct reference to a tag:
+	This is done when we want to style a tag in the complete HTML file in same way. For example, if I want to style all the <a> tags in my HTML file the same way, then I’ll simply refer to it in my CSS file as follows:
+a{attributes}
+All the attributes that you want to give to the <a> tag are mentioned in curly braces.
+
+	ii)  Using classes:
+		Though referring directly to the tags is possible, it is considered a wrong practice. So we use classes. Take the above example. To refer to a certain <a> tag, we need to mention the class of the tag before closing the it as:
+	<a class=”example”>
+This class is then called in CSS file as:
+	.example{attributes}
+
+	iii) Using id:
+		This method is similar to class method. Only difference is in the syntax. The HTML counterpart this method is written as:
+	<a id=”example”>
+And for CSS,
+	#example{attributes}
+Let’s take a look at some of the properties that can be manipulated using CSS so as to beautify our webpage:
+2.1) Properties Table
+Text Properties
+Property
+Description
+Values
+color
+Sets the color of a text
+RGB, hex, keyword
+line-height
+Sets the distance between lines
+normal, number, length, %
+letter-spacing
+Increase or decrease the space between characters
+normal, length
+text-align
+Aligns the text in an element
+left, right, center, justify
+text-decoration
+Adds decoration to text
+none, underline, overline, line-through
+text-indent
+Indents the first line of text in an element
+length, %
+text-transform
+Controls the letters in an element
+none, capitalize, uppercase, lowercase
+
+
+List Properties
+Property
+Description
+Values
+list-style
+Sets all the properties for a list in one declaration
+list-style-type, list-style-position, list-style-image, inherit
+list-style-image
+Specifies an image as the list-item marker
+URL, none, inherit
+list-style-position
+Specifies where to place the list-item marker
+inside, outside, inherit
+list-style-type
+Specifies the type of list-item marker
+none, disc, circle, square, decimal, decimal-leading-zero, 
+armenian, georgian, lower-alpha, upper-alpha, lower-greek, 
+lower-latin, upper-latin, lower-roman, upper-roman, inherit
+
+
+
+Border Properties
+Property
+Description
+Values
+border
+Sets all the border properties in one declaration
+border-width, border-style, border-color
+border-bottom
+Sets all the bottom border properties in one declaration
+border-bottom-width, border-bottom-style, border-bottom-color
+border-bottom-color
+Sets the color of the bottom border
+border-color
+border-bottom-style
+Sets the style of the bottom border
+border-style
+border-bottom-width
+Sets the width of the bottom border
+border-width
+border-color
+Sets the color of the four borders
+color_name, hex_number, rgb_number, transparent, inherit
+border-left
+Sets all the left border properties in one declaration
+border-left-width, border-left-style, border-left-color
+border-left-color
+Sets the color of the left border
+border-color
+border-left-style
+Sets the style of the left border
+border-style
+border-left-width
+Sets the width of the left border
+border-width
+border-right
+Sets all the right border properties in one declaration
+border-right-width, border-right-style, border-right-color
+border-right-color
+Sets the color of the right border
+border-color
+border-right-style
+Sets the style of the right border
+border-style
+border-right-width
+Sets the width of the right border
+border-width
+border-style
+Sets the style of the four borders
+none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset, inherit
+border-top
+Sets all the top border properties in one declaration
+border-top-width, border-top-style, border-top-color
+border-top-color
+Sets the color of the top border
+border-color
+border-top-style
+Sets the style of the top border
+border-style
+border-top-width
+Sets the width of the top border
+border-width
+border-width
+Sets the width of the four borders
+thin, medium, thick, length, inherit
+
+
+Font Properties
+Property
+Description
+Values
+font
+Sets all the font properties in one declaration
+font-style, font-variant, font-weight, font-size/line-height, font-family, caption, icon, menu, message-box, small-caption, status-bar, inherit
+font-family
+Specifies the font family for text
+family-name, generic-family, inherit
+font-size
+Specifies the font size of text
+xx-small, x-small, small, medium, large, x-large, xx-large, smaller, larger, length, %, inherit
+font-style
+Specifies the font style for text
+normal, italic, oblique, inherit
+font-variant
+Specifies whether or not a text should be displayed in a small-caps font
+normal, small-caps, inherit
+font-weight
+Specifies the weight of a font
+normal, bold, bolder, lighter, 
+100, 200, 300, 400, 500, 600, 700, 800, 900, inherit.
+
+
+
+2.2)After properly manipulating these properties, our webpage should look something like this:
+
+
+
+Impressive change, right? 
+Go ahead and try it yourself.
+Note: Use <div> tag in HTML to contain and style certain part of data. This is a very important tag to master in order to properly design your webpage.
+
+Another very important tool that is used to beautifully design webpages is “960 Grid”.
+
+3)960 Grid
+
+
+960 Grid is a CSS framework  (Pre defined classes ready to be used) which makes it easy to position your elements because all the structure of the page is pre defined. You just need to have the vision and you can place any element easily on the page.
+
+Here's how the structure looks like.
+
+
+Now, this is one of 12 column layouts that 960 grid framework provides. 
+
+The package comes with a lot of CSS files, you can choose any of your liking for eg
+12 column grid, 16 column and 24 column. 
+
+
+We also recommend to other files to be linked :
+1. reset.css : This CSS files reset all the margins, padding and positions with which it gets same for every browser be it firefox, safari, chrome . So that you don't have to worry about every browser.
+2. text.css : It is the built in typography which has decent fonts already applied. You can override those with your own CSS sheet.
+
+Never, change the CSS files of the framework. They are tried and tested. If you want to apply your own styles, override that particular element in your own stylesheet.
+
+Let's have a look at what 960 Grid is capable of :
+
+3.1)Choosing a container:
+
+Now, it is up to you if you want 16 columns, 24 or 12. 
+So, to apply a 12 column grid, this is how we do it
+
+<div class class = "container_12">
+	This is how you apply 12 grid system.
+</div>
+
+Now, you have successfully made a  12 column grid.
+
+Next, we will learn how to give appropriate size to our elements.
+
+
+3.2)Grids:
+
+That's the beauty of frameworks, it makes everything so easy. Let's say you are making a huge header and you want it to take the whole width.
+All you have to do is :
+<div class = "container">  
+	<div class = "grid_12">
+	<!-- insert header here-->
+	</div>
+</div>
+
+If you want 2 paragraphs taking half of page. Then use grid_6 for both of them in the same container. This way, they will take up exactly half of the page. Now, if you for instance give grid_6 to one and grid_ 7 to the other, then it will automatically move to the next line. This is a very nice way to create even pages.
+
+3.3)Prefix and Suffix:
+
+Now you must be wondering what if you want to leave some space in between or start from the 3rd column or so. That is also possible in 960 Grid system.
+If you use class = "prefix_3" this will leave 3 columns in front and start from the 4th one.
+And suffix_3 will leave 3 columns behind.
+As you know, an element can have any number of ids and classes. So, similarly you can club, grid_x and prefix_y and suffix_z where x,y,z = 1 to 12 to get the desired result.
+Let's show you an example of how 960 Grid really is :
+
+
+		
+Here, you can 960 grid has been used. Please note
+Its all in one container
+The header takes up the whole 12 columns
+The paragraph also takes up the whole 12 columns.
+The equipments are specialties are given exact size but prefix and suffix has been used.
+The footer takes up the whole 12 columns.
+
+Even though the tutorial for 960 Grid was a small one but it has way too many facilities. Please note it is not the only grid system which you have to use but it's good for starting out. So, let's try to make our website a little better positioned and see you next time.
+This is all form my side on the basics of web designing.
+
+Advice: Keep a cheat sheet of the languages you study with you. But don’t tell anyone that you have one (it seems unprofessional).
+
+
+Thank You
